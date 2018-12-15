@@ -1,1 +1,10 @@
 c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\ArbitrageCalculator.exe.config
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\ArbitrageCalculator.exe
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\ArbitrageCalculator.pdb
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\AngleSharp.dll
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\AngleSharp.xml
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.csprojResolveAssemblyReference.cache
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.Properties.Resources.resources
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.csproj.GenerateResource.Cache
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.exe
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.pdb
