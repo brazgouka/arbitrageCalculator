@@ -1,0 +1,1 @@
+c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\bin\Debug\ArbitrageCalculator.exe.config
