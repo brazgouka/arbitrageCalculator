@@ -28,5 +28,20 @@ namespace ArbitrageCalculator
             label12.Text = arbitrage.getArbitrageValue().ToString();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(richTextBox1.Text != null)
+            {
+                float firstTeamMoney = (float)(Convert.ToDouble(richTextBox1.Text) / (arbitrage.firstTeamCoeff * arbitrage.getArbitrageValue()));
+                float secondTeamMoney = (float)(Convert.ToDouble(richTextBox1.Text) / (arbitrage.secondTeamCoeff * arbitrage.getArbitrageValue()));
+                MessageBox.Show(firstTeamMoney + " on " + arbitrage.firstTeam + " in " + arbitrage.firstTeamBookmaker + "\n" +
+                    secondTeamMoney + " on " + arbitrage.secondTeam + " in " + arbitrage.secondTeamBookmaker + "\n", "Best bet", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Enter the sum first!");
+            }
+        }
     }
 }
