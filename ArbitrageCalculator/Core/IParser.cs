@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom.Html;
 
-namespace Parser.Core
+namespace ArbitrageCalculator.Core
 {
     interface IParser<T> where T : class
     {

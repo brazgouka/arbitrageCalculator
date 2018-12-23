@@ -1,4 +1,4 @@
-﻿namespace Parser.Core
+﻿namespace ArbitrageCalculator.Core
 {
     interface IParserSettings
     {

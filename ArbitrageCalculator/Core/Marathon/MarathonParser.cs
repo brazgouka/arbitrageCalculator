@@ -2,9 +2,9 @@
 using System.Linq;
 using AngleSharp.Dom.Html;
 
-namespace Parser.Core.Habra
+namespace ArbitrageCalculator.Core.Marathon
 {
-    class HabraParser : IParser<string[]>
+    class MarathonParser : IParser<string[]>
     {
         public string bookmakerName = "Marathon";
 

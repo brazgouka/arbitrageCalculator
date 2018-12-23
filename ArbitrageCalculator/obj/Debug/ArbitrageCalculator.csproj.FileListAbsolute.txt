@@ -8,3 +8,5 @@ c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\Arbitra
 c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.csproj.GenerateResource.Cache
 c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.exe
 c:\users\brazg\documents\visual studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.pdb
+C:\Users\brazg\Documents\Visual Studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.MainForm.resources
+C:\Users\brazg\Documents\Visual Studio 2015\Projects\ArbitrageCalculator\ArbitrageCalculator\obj\Debug\ArbitrageCalculator.GameInfo.resources

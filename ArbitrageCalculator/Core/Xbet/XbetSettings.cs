@@ -1,4 +1,4 @@
-﻿namespace Parser.Core.Xbet
+﻿namespace ArbitrageCalculator.Core.Xbet
 {
     class XbetSettings : IParserSettings
     {

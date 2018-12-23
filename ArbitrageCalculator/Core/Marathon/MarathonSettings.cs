@@ -1,8 +1,8 @@
-﻿namespace Parser.Core.Habra
+﻿namespace ArbitrageCalculator.Core.Marathon
 {
-    class HabraSettings : IParserSettings
+    class MarathonSettings : IParserSettings
     {
-        public HabraSettings(string league)
+        public MarathonSettings(string league)
         {
             if (league.Equals("National NFL League"))
             {

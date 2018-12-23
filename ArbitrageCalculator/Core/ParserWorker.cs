@@ -1,7 +1,7 @@
 ﻿using AngleSharp.Parser.Html;
 using System;
 
-namespace Parser.Core
+namespace ArbitrageCalculator.Core
 {
     class ParserWorker<T> where T : class
     {
@@ -10,20 +10,8 @@ namespace Parser.Core
 
         HtmlLoader loader;
 
-        public event Action<T> OnNewData;
-        public event Action<string> OnCompleted;
-        public IParserSettings Settings
-        {
-            get
-            {
-                return parserSettings;
-            }
-            set
-            {
-                parserSettings = value;
-                loader = new HtmlLoader(value);
-            }
-        }
+        public event Action<T> NewData;
+        public event Action<object> Completed;
         public ParserWorker(IParser<T> parser)
         {
             this.parser = parser;
@@ -35,7 +23,7 @@ namespace Parser.Core
             loader = new HtmlLoader(parserSettings);
         }
 
-        private async void Worker()
+        public async void Start()
         {
             if (loader != null)
             {
@@ -46,9 +34,9 @@ namespace Parser.Core
 
                 var result = parser.Parse(document);
 
-                OnNewData?.Invoke(result);
+                NewData?.Invoke(result);
 
-                OnCompleted?.Invoke(loader.url);
+                Completed?.Invoke(this);
             }
         }
 

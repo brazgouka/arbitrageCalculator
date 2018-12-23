@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AngleSharp.Dom.Html;
 
-namespace Parser.Core.Xbet
+namespace ArbitrageCalculator.Core.Xbet
 {
     class XbetParser : IParser<string[]>
     {
