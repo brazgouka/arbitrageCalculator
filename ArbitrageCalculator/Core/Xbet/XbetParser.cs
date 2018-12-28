@@ -14,13 +14,13 @@ namespace ArbitrageCalculator.Core.Xbet
         {
             var games = new List<string>();
 
-            var countryNames = document.QuerySelectorAll("span").Where(item => item.ClassName != null && item.ClassName.Equals("c-events__team"));
+            var teamNames = document.QuerySelectorAll("span").Where(item => item.ClassName != null && item.ClassName.Equals("c-events__team"));
             var coeffs = document.QuerySelectorAll("a").Where(item => item.ClassName != null && item.ClassName.Contains("c-bets__bet c-bets__bet_coef c-bets__bet_sm"));
             
-            for (int j = 0, i = 0; j < countryNames.Count(); j++)
+            for (int j = 0, i = 0; j < teamNames.Count(); j++)
             {
-                games.Add(countryNames.ElementAt(j++).TextContent.Trim());
-                games.Add(countryNames.ElementAt(j).TextContent.Trim());
+                games.Add(teamNames.ElementAt(j++).TextContent.Trim());
+                games.Add(teamNames.ElementAt(j).TextContent.Trim());
                 games.Add(coeffs.ElementAt(i++).TextContent.Trim());
                 i++;
                 games.Add(coeffs.ElementAt(i++).TextContent.Trim());

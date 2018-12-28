@@ -46,7 +46,7 @@ namespace ArbitrageCalculator
             parsers.Add(new ParserWorker<string[]>(new MarathonParser(), new MarathonSettings(listBox1.Text)));
             foreach (var parser in parsers)
             {
-                parser.NewData += arbitrageCalculator.addData;
+                parser.NewData += arbitrageCalculator.AddData;
                 parser.Completed += timer1_Tick;
                 parser.Start();
             }
@@ -69,11 +69,6 @@ namespace ArbitrageCalculator
         {
             GameInfo gameInfo = new GameInfo(arbitrageCalculator.getArbitrageById(ListTitles.SelectedIndex));
             gameInfo.Show();
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
     }

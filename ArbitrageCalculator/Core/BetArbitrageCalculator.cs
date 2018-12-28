@@ -7,20 +7,19 @@ namespace ArbitrageCalculator.Core
     class BetArbitrageCalculator
     {
         List<Game> games = new List<Game>();
-
         List<Arbitrage> arbitrages = new List<Arbitrage>();
 
-        public void addData(string[] data)
+        public void AddData(string[] data)
         {
             for (int i = 0; i < data.Length; i++)
             {
                 games.Add(new Game(data[i++], data[i++], Convert.ToDouble(data[i++].Replace('-', '0').Replace(',', '.')),
                     Convert.ToDouble(data[i++].Replace('-', '0').Replace(',', '.')), data[i]));
             }
-            findArbitrages();
+            FindArbitrages();
         }
 
-        private void findArbitrages()
+        private void FindArbitrages()
         {
             for (int i = 0; i < games.Count; i++)
             {

@@ -12,14 +12,14 @@ namespace ArbitrageCalculator.Core.Marathon
         {
             var games = new List<string>();
 
-            var countryNames = document.QuerySelectorAll("div").Where(item => item.ClassName != null && item.ClassName.Contains("member-name"));
+            var teamNames = document.QuerySelectorAll("div").Where(item => item.ClassName != null && item.ClassName.Contains("member-name"));
 
             var coeffs = document.QuerySelectorAll("span").Where(item => item.ClassName != null && item.ClassName.Contains("selection-link"));
             
-            for (int j = 0, i = 0; j < countryNames.Count(); j++, i++)
+            for (int j = 0, i = 0; j < teamNames.Count(); j++, i++)
             {
-                games.Add(countryNames.ElementAt(j++).TextContent.Trim());
-                games.Add(countryNames.ElementAt(j).TextContent.Trim());
+                games.Add(teamNames.ElementAt(j++).TextContent.Trim());
+                games.Add(teamNames.ElementAt(j).TextContent.Trim());
                 games.Add(coeffs.ElementAt(i++).TextContent.Trim());
                 games.Add(coeffs.ElementAt(i).TextContent.Trim());
                 games.Add(bookmakerName);

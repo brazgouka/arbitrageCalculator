@@ -12,6 +12,7 @@ namespace ArbitrageCalculator.Core
 
         public event Action<T> NewData;
         public event Action<object> Completed;
+
         public ParserWorker(IParser<T> parser)
         {
             this.parser = parser;
