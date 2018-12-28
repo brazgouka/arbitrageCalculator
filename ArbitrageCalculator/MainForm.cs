@@ -36,19 +36,26 @@ namespace ArbitrageCalculator
             button2.Enabled = true;
         }
 
-        private void Parser_NewData(string[] arg2)
+        private void Parser_NewData(string[] text)
         {
-            ListTitles.Items.AddRange(arg2);
+            ListTitles.Items.AddRange(text);
         }
+
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            parsers.Add(new ParserWorker<string[]>(new XbetParser(), new XbetSettings(listBox1.Text)));
-            parsers.Add(new ParserWorker<string[]>(new MarathonParser(), new MarathonSettings(listBox1.Text)));
-            foreach (var parser in parsers)
+            if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable() == true)
             {
-                parser.NewData += arbitrageCalculator.AddData;
-                parser.Completed += timer1_Tick;
-                parser.Start();
+                MessageBox.Show("Error! Couldn't upload site!!! Check your network");
+            }
+            else { 
+                parsers.Add(new ParserWorker<string[]>(new XbetParser(), new XbetSettings(listBox1.Text)));
+                parsers.Add(new ParserWorker<string[]>(new MarathonParser(), new MarathonSettings(listBox1.Text)));
+                foreach (var parser in parsers)
+                {
+                    parser.NewData += arbitrageCalculator.AddData;
+                    parser.Completed += timer1_Tick;
+                    parser.Start();
+                }
             }
         }
 

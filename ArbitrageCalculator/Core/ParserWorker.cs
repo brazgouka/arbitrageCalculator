@@ -24,21 +24,21 @@ namespace ArbitrageCalculator.Core
             loader = new HtmlLoader(parserSettings);
         }
 
-        public async void Start()
+        public async void Start() 
         {
-            if (loader != null)
-            {
-                var source = await loader.GetSource();
-                var domParser = new HtmlParser();
+                if (loader != null)
+                {
+                    var source = await loader.GetSource();
+                    var domParser = new HtmlParser();
 
-                var document = await domParser.ParseAsync(source);
+                    var document = await domParser.ParseAsync(source);
 
-                var result = parser.Parse(document);
+                    var result = parser.Parse(document);
 
-                NewData?.Invoke(result);
+                    NewData?.Invoke(result);
 
-                Completed?.Invoke(this);
-            }
+                    Completed?.Invoke(this);
+                }
         }
 
 
